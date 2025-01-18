@@ -1,39 +1,42 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
-// Constants
-const SCREEN_WIDTH = 1000;
-const SCREEN_HEIGHT = 1000;
-const PIPE_WIDTH = 40;
+// Canvas dimensions
+const SCREEN_WIDTH = 600;
+const SCREEN_HEIGHT = 800;
+
+// Pipe dimensions
+const PIPE_WIDTH = 30;
 const PIPE_HEIGHT = PIPE_WIDTH * 9;
+
+// Offsets
+const TOP_OFFSET = 50;
+const BOTTOM_OFFSET = 50;
+
+// Pipe positions
+const recvPipeOne = {
+    x: 100,
+    y: SCREEN_HEIGHT - BOTTOM_OFFSET,
+};
+
+const recvPipeTwo = {
+    x: 300,
+    y: SCREEN_HEIGHT - BOTTOM_OFFSET,
+};
+
+const supPipeOne = {
+    x: 100,
+    y: PIPE_HEIGHT + TOP_OFFSET,
+};
+
+const supPipeTwo = {
+    x: 300,
+    y: PIPE_HEIGHT + TOP_OFFSET,
+};
 
 // Set canvas size
 canvas.width = SCREEN_WIDTH;
 canvas.height = SCREEN_HEIGHT;
-
-const TOP_OFFSET = 100;
-const BOTTOM_OFFSET = 100;
-
-// Pipe positions
-const recvPipeOne = {
-  x: 100,
-  y: SCREEN_HEIGHT - BOTTOM_OFFSET,
-};
-
-const recvPipeTwo = {
-  x: 300,
-  y: SCREEN_HEIGHT - 100,
-};
-
-const supPipeOne = {
-  x: 100,
-  y: PIPE_HEIGHT + TOP_OFFSET,
-};
-
-const supPipeTwo = {
-  x: 300,
-  y: PIPE_HEIGHT + TOP_OFFSET,
-};
 
 function drawPipe(x, y, openSide) {
   ctx.strokeStyle = "black";
