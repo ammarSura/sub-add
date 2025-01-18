@@ -3,15 +3,15 @@ const ctx = canvas.getContext("2d");
 
 // Canvas dimensions
 const SCREEN_WIDTH = 600;
-const SCREEN_HEIGHT = 800;
+const SCREEN_HEIGHT = 700;
 
 // Pipe dimensions
 const PIPE_WIDTH = 30;
 const PIPE_HEIGHT = PIPE_WIDTH * 9;
 
 // Offsets
-const TOP_OFFSET = 50;
-const BOTTOM_OFFSET = 50;
+const TOP_OFFSET = 40;
+const BOTTOM_OFFSET = 40;
 
 // Pipe positions
 const recvPipeOne = {
